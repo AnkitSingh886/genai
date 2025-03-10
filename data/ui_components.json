@@ -1,0 +1,266 @@
+[
+    {
+        "image": "dashboard.png",
+        "components": {
+            "UI_Components": [
+                {
+                    "component_name": "Button",
+                    "position": "top-right",
+                    "color": "#007bff",
+                    "size": "medium",
+                    "text": "Submit",
+                    "action": "Sends form data to API"
+                },
+                {
+                    "component_name": "Modal",
+                    "position": "center",
+                    "background_color": "#ffffff",
+                    "border_radius": "8px",
+                    "header_text": "Confirm Action",
+                    "body_text": "Are you sure you want to proceed?",
+                    "buttons": [
+                        "Yes",
+                        "Cancel"
+                    ]
+                },
+                {
+                    "component_name": "Card",
+                    "position": "left",
+                    "width": "300px",
+                    "height": "200px",
+                    "background_color": "#f8f9fa",
+                    "border_radius": "4px",
+                    "padding": "12px"
+                },
+                {
+                    "component_name": "Form",
+                    "position": "center",
+                    "fields": [
+                        {
+                            "name": "Username",
+                            "type": "input",
+                            "placeholder": "Enter username"
+                        },
+                        {
+                            "name": "Password",
+                            "type": "input",
+                            "placeholder": "Enter password",
+                            "password": true
+                        }
+                    ],
+                    "submit_button": {
+                        "text": "Login",
+                        "color": "#007bff"
+                    }
+                }
+            ],
+            "Layout": {
+                "grid_system": "12-column",
+                "spacing": "16px",
+                "margins": "8px",
+                "paddings": "12px"
+            },
+            "Typography": {
+                "font_family": "Inter",
+                "heading_size": "24px",
+                "body_size": "16px",
+                "bold": true
+            },
+            "Colors": {
+                "primary": "#007bff",
+                "secondary": "#6c757d",
+                "background": "#f8f9fa",
+                "success": "#28a745",
+                "error": "#dc3545"
+            },
+            "Interactions": {
+                "hover_effect": "fade-in",
+                "click_action": "submit form data",
+                "animation": "fadeIn"
+            }
+        }
+    },
+    {
+        "image": "leave.png",
+        "components": {
+            "UI_Components": [
+                {
+                    "component_name": "Button",
+                    "position": "top-right",
+                    "color": "#007bff",
+                    "size": "medium",
+                    "text": "Submit",
+                    "action": "Sends form data to API"
+                },
+                {
+                    "component_name": "Form",
+                    "position": "center",
+                    "fields": [
+                        {
+                            "name": "Email",
+                            "type": "input",
+                            "placeholder": "example@example.com"
+                        },
+                        {
+                            "name": "Password",
+                            "type": "input",
+                            "placeholder": "Password",
+                            "attributes": {
+                                "type": "password"
+                            }
+                        },
+                        {
+                            "name": "Confirm Password",
+                            "type": "input",
+                            "placeholder": "Confirm Password",
+                            "attributes": {
+                                "type": "password"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "component_name": "Table",
+                    "position": "center",
+                    "header": [
+                        {
+                            "name": "Leave Type",
+                            "width": "30%"
+                        },
+                        {
+                            "name": "Date",
+                            "width": "20%"
+                        },
+                        {
+                            "name": "Duration",
+                            "width": "20%"
+                        },
+                        {
+                            "name": "Status",
+                            "width": "30%"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "type": "Annual",
+                            "date": "2022-01-01",
+                            "duration": "10 days",
+                            "status": "Approved"
+                        },
+                        {
+                            "type": "Sick",
+                            "date": "2022-02-15",
+                            "duration": "5 days",
+                            "status": "Pending"
+                        }
+                    ]
+                },
+                {
+                    "component_name": "Card",
+                    "position": "center",
+                    "image": "https://example.com/leave.png",
+                    "title": "Leave Request",
+                    "description": "Request for annual leave from 2022-01-01 to 2022-01-10"
+                },
+                {
+                    "component_name": "Dropdown",
+                    "position": "top-right",
+                    "options": [
+                        {
+                            "text": "Annual"
+                        },
+                        {
+                            "text": "Sick"
+                        }
+                    ]
+                }
+            ],
+            "Layout": {
+                "grid_system": "12-column",
+                "spacing": "16px",
+                "margins": "8px",
+                "paddings": "12px"
+            },
+            "Typography": {
+                "font_family": "Inter",
+                "heading_size": "24px",
+                "body_size": "16px"
+            },
+            "Colors": {
+                "primary": "#007bff",
+                "secondary": "#6c757d",
+                "background": "#f8f9fa",
+                "success": "#28a745",
+                "error": "#dc3545"
+            }
+        }
+    },
+    {
+        "image": "pods.png",
+        "components": {
+            "UI_Components": [
+                {
+                    "component_name": "Button",
+                    "position": "top-right",
+                    "color": "#007bff",
+                    "size": "medium",
+                    "text": "Submit",
+                    "action": "Sends form data to API"
+                },
+                {
+                    "component_name": "Card",
+                    "position": "top-center",
+                    "background_color": "#f8f9fa",
+                    "border_radius": "8px",
+                    "header_text": "Pods",
+                    "body_text": "A list of all available pods"
+                },
+                {
+                    "component_name": "Input",
+                    "position": "top-center",
+                    "type": "search",
+                    "placeholder_text": "Search pods"
+                },
+                {
+                    "component_name": "Table",
+                    "position": "center",
+                    "headers": [
+                        "Name",
+                        "Description",
+                        "Actions"
+                    ],
+                    "rows": [
+                        [
+                            "Pod 1",
+                            "This is pod 1",
+                            "View Details"
+                        ],
+                        [
+                            "Pod 2",
+                            "This is pod 2",
+                            "View Details"
+                        ]
+                    ]
+                }
+            ],
+            "Layout": {
+                "grid_system": "12-column",
+                "spacing": "16px",
+                "margins": "8px",
+                "paddings": "12px"
+            },
+            "Typography": {
+                "font_family": "Inter",
+                "heading_size": "24px",
+                "body_size": "16px"
+            },
+            "Colors": {
+                "primary": "#007bff",
+                "secondary": "#6c757d",
+                "background": "#f8f9fa",
+                "success": "#28a745",
+                "error": "#dc3545"
+            }
+        }
+    }
+]

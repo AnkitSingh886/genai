@@ -1,0 +1,152 @@
+{
+    "UI_UX_Guidelines": {
+        "Color_Scheme": {
+            "Primary": "#007bff",
+            "Secondary": "#6c757d",
+            "Background": "#f8f9fa",
+            "Success": "#28a745",
+            "Error": "#dc3545"
+        },
+        "Typography": {
+            "Font": "Inter",
+            "Heading_Size": "24px",
+            "Body_Size": "16px"
+        },
+        "Components": [
+            "Buttons",
+            "Modals",
+            "Cards",
+            "Forms"
+        ]
+    },
+    "API_Endpoints": [
+        {
+            "endpoint": "/api/dashboard",
+            "method": "GET",
+            "headers": {
+                "Authorization": "Bearer <token>"
+            },
+            "response": {
+                "tiles": [
+                    {
+                        "id": "1",
+                        "title": "Leave Summary",
+                        "content": "10 leaves remaining"
+                    },
+                    {
+                        "id": "2",
+                        "title": "Pod Members",
+                        "content": "3 active members"
+                    }
+                ]
+            }
+        },
+        {
+            "endpoint": "/api/lms/leave/apply",
+            "method": "POST",
+            "headers": {
+                "Authorization": "Bearer <token>"
+            },
+            "request_body": {
+                "startDate": "YYYY-MM-DD",
+                "endDate": "YYYY-MM-DD",
+                "reason": "string"
+            },
+            "response": {
+                "message": "Leave request submitted successfully",
+                "status": "pending"
+            }
+        },
+        {
+            "endpoint": "/api/lms/leave/approve",
+            "method": "POST",
+            "headers": {
+                "Authorization": "Bearer <token>"
+            },
+            "request_body": {
+                "leaveId": "12345",
+                "status": "approved"
+            },
+            "response": {
+                "message": "Leave request approved",
+                "status": "approved"
+            }
+        },
+        {
+            "endpoint": "/api/pods/details",
+            "method": "GET",
+            "headers": {
+                "Authorization": "Bearer <token>"
+            },
+            "response": {
+                "podId": "56789",
+                "podName": "Innovation Team",
+                "members": [
+                    {
+                        "id": "1",
+                        "name": "John Doe",
+                        "role": "Lead Developer"
+                    },
+                    {
+                        "id": "2",
+                        "name": "Jane Smith",
+                        "role": "UI/UX Designer"
+                    }
+                ]
+            }
+        },
+        {
+            "endpoint": "/api/pods/recommend",
+            "method": "POST",
+            "headers": {
+                "Authorization": "Bearer <token>"
+            },
+            "request_body": {
+                "podId": "56789",
+                "recommendedUserId": "3"
+            },
+            "response": {
+                "message": "Recommendation sent successfully"
+            }
+        }
+    ],
+    "User_Roles": {
+        "General_User": [
+            "Apply for leave",
+            "View leave balance"
+        ],
+        "Manager": [
+            "Approve/reject leave",
+            "View team reports"
+        ]
+    },
+    "Authentication": {
+        "Login": {
+            "endpoint": "/api/auth/login",
+            "method": "POST",
+            "request_body": {
+                "email": "user@example.com",
+                "password": "securepassword"
+            },
+            "response": {
+                "token": "jwt-token-here",
+                "user": {
+                    "id": "1",
+                    "role": "manager"
+                }
+            }
+        },
+        "Fetch_User": {
+            "endpoint": "/api/auth/me",
+            "method": "GET",
+            "headers": {
+                "Authorization": "Bearer <token>"
+            },
+            "response": {
+                "id": "1",
+                "name": "John Doe",
+                "role": "manager"
+            }
+        }
+    }
+}
